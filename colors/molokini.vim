@@ -30,7 +30,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "molokini"
+let g:colors_name = "molokini"
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
