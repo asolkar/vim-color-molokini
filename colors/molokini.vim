@@ -77,9 +77,9 @@ let s:lightblack2 = { "gui": "#1C1C1C", "cterm": "234" }
 let s:lightblack3 = { "gui": "#808080", "cterm": "242" }
 let s:darkblack   = { "gui": "#1B1D1E", "cterm": "0" }
 let s:grey        = { "gui": "#465457", "cterm": "239" }
-let s:lightgrey   = { "gui": "#465457", "cterm": "239" }
+let s:lightgrey   = { "gui": "#263437", "cterm": "242" }
 let s:darkgrey    = { "gui": "#808080", "cterm": "244" }
-let s:warmgrey    = { "gui": "#455354", "cterm": "238" }
+let s:warmgrey    = { "gui": "#657374", "cterm": "240" }
 
 let s:pink        = { "gui": "#f51d5a", "cterm": "196" }
 let s:green       = { "gui": "#A6E22E", "cterm": "118" }
@@ -92,11 +92,11 @@ let s:purered     = { "gui": "#ff0000", "cterm": "52" }
 let s:darkred     = { "gui": "#80001c", "cterm": "124" }
 let s:blue        = { "gui": "#007ade", "cterm": "33" }
 
-let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
-let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
-let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
-let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
-let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
+let s:addbg       = { "gui": "#223322", "cterm": "22" }
+let s:delfg       = { "gui": "#773f3f", "cterm": "1" }
+let s:delbg       = { "gui": "#332222", "cterm": "52" }
+let s:changebg    = { "gui": "#222233", "cterm": "54" }
+let s:difftxtbg   = { "gui": "#6F4F00", "cterm": "208" }
 
 let s:cyan        = { "gui": "#A1EFE4" }
 let s:br_green    = { "gui": "#9EC400" }
@@ -144,10 +144,10 @@ call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
 
 " diff
-call s:h("DiffAdd",       { "fg": s:addfg,      "bg": s:addbg })
-call s:h("DiffDelete",    { "fg": s:black,      "bg": s:delbg })
-call s:h("DiffChange",    { "fg": s:changefg,   "bg": s:changebg })
-call s:h("DiffText",      { "fg": s:black,      "bg": s:aqua })
+call s:h("DiffAdd",       {                     "bg": s:addbg })
+call s:h("DiffDelete",    { "fg": s:delfg,      "bg": s:delbg })
+call s:h("DiffChange",    {                     "bg": s:changebg })
+call s:h("DiffText",      {                     "bg": s:difftxtbg })
 
 " fold
 call s:h("Folded",        { "fg": s:warmgrey,   "bg": s:darkblack })
@@ -217,8 +217,8 @@ call s:h("NERDTreeBookmarksLeader", { "fg": s:black })
 call s:h("NERDTreeBookmarkName",    { "fg": s:yellow })
 call s:h("NERDTreeCWD",             { "fg": s:pink })
 call s:h("NERDTreeUp",              { "fg": s:white })
-call s:h("NERDTreeDirSlash",        { "fg": s:grey })
-call s:h("NERDTreeDir",             { "fg": s:grey })
+call s:h("NERDTreeDirSlash",        { "fg": s:orange })
+call s:h("NERDTreeDir",             { "fg": s:orange })
 
 " Syntastic
 " ---------
